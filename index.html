@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="randomQuotes">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Random quote generator</title>
+  <link href='https://fonts.googleapis.com/css?family=Courgette|Bad+Script|Roboto+Condensed:400,700' rel='stylesheet' type='text/css' />
+  <link href="./bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="./random-quotes.css" type="text/css" rel="stylesheet" />
+  <script src="./angular.min.js"></script>
+  <script src="./random-quotes.app.js"></script>
+</head>
+<body>
+  <header class="author-message">
+    Hi, This is a simple random quotes generator. Please have a look at <a href="https://github.com/IAmAnubhavSaini/random-quotes">source code</a> and the <a href="https://iamanubhavsaini.github.io/random-quotes">online site</a>.
+    <br />
+    Follow author on <a href="https://twitter.com/iamanubhavsaini">twitter/iamanubhavsaini</a> and <a href="https://github.com/iamanubhavsaini">github/iamanubhavsaini</a>.
+  </header>
+  <section ng-controller="RandomQuotesController as quotes">
+    <div class="Quote" ng-init="model = quotes.randomQuote()">
+      <div class="quote">{{ model.quote }}</div>
+      <div class="quoter">{{ model.quoter }}</div>
+      <div class="source">{{ model.source }}</div>
+    </div>
+  </section>
+  <footer></footer>
+  <div id="scripts"></div>
+</body>
+</html>

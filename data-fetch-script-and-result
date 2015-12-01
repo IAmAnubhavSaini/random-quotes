@@ -1,0 +1,44 @@
+  var quotes = document.getElementsByClassName('bqQuoteLink')
+  var quoters = document.getElementsByClassName('bq-aut')
+  var sources = [
+                  "https://www.brainyquote.com/quotes/keywords/open_source.html",
+                  "https://www.brainyquote.com/quotes/keywords/open_source_2.html",
+                  "https://www.brainyquote.com/quotes/keywords/open_source_3.html"
+                ];
+sources.forEach(function(source){
+if(document.location.toString() === source){
+  for(var i = 0; i < quotes.length; i++) {
+    var  quote = quotes[i].innerHTML.split('>')[1].split('<')[0];
+    var quoter = quoters[i].innerHTML.split('>')[1].split('<')[0];
+    console.log('{ "quote": "'+quote+'", "quoter" : "'+quoter+'", "source": "'+source+'" },');
+  }
+}
+});
+------------------------------------------------------------------------------------------------------
+
+{ "quote": "I think, fundamentally, open source does tend to be more stable software. It's the right way to do things.", "quoter" : "Linus Torvalds", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "The strategic marketing paradigm of Open Source is a massively-parallel drunkard's walk filtered by a Darwinistic process.", "quoter" : "Bruce Perens", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "We have a very active testing community which people don't often think about when you have open source.", "quoter" : "Mitchell Baker", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "For me, open source is a moral thing.", "quoter" : "Matt Mullenweg", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "If you want to build an open source project, you can't let your ego stand in the way. You can't rewrite everybody's patches, you can't second-guess everybody, and you have to give people equal control.", "quoter" : "Rasmus Lerdorf", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "In real open source, you have the right to control your own destiny.", "quoter" : "Linus Torvalds", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "Open source can propagate to fill all the nooks and crannies that people want it to fill.", "quoter" : "Mitch Kapor", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "I often compare open source to science. To where science took this whole notion of developing ideas in the open and improving on other peoples' ideas and making it into what science is today and the incredible advances that we have had. And I compare that to witchcraft and alchemy, where openness was something you didn't do.", "quoter" : "Linus Torvalds", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "Certainly there's a phenomenon around open source. You know free software will be a vibrant area. There will be a lot of neat things that get done there.", "quoter" : "Bill Gates", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "In open source, we feel strongly that to really do something well, you have to get a lot of people involved.", "quoter" : "Linus Torvalds", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "If you think of the ideas of open source applied to information in an encyclopedia, you get to Wikipedia - lots and lots of small contributions that bubble up to something that's meaningful.", "quoter" : "Matt Mullenweg", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "The Internet browser is the most susceptible to viruses. The browser is naive about downloading and executing software. Google is trying to help by releasing the Chrome browser as open source.", "quoter" : "Vint Cerf", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "Intellectual property is an important legal and cultural issue. Society as a whole has complex issues to face here: private ownership vs. open source, and so on.", "quoter" : "Tim Berners-Lee", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "Al Qaeda is nothing more than a mutant supply chain. They're playing off the same platform as Wal-Mart and Dell. They're just not restrained by it. What is al Qaeda? It's an open source religious political movement that works off the global supply chain. That's what we're up against in Iraq. We're up against a suicide supply chain.", "quoter" : "Thomas Friedman", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "Open source is a beautiful way of collaborating; but what's happening on the free Internet is more akin to the 'crowdsourcing' of journalists and other content creators by advertisers who no longer have to pay them - only the search engines that parse their articles.", "quoter" : "Douglas Rushkoff", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "I think the way IBM has embraced the open source philosophy has been quite astonishing, but gratifying. I hope they'll do very well with it.", "quoter" : "Larry Wall", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "Empowerment of individuals is a key part of what makes open source work, since in the end, innovations tend to come from small groups, not from large, structured efforts.", "quoter" : "Tim O'Reilly", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "We're not done yet, but two things WordPress has been able to exemplify is that open source can create great user experiences and that it's possible to have a successful commercial entity and a wider free software community living and working in harmony.", "quoter" : "Matt Mullenweg", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "One thing about open source is that even the failures contribute to the next thing that comes up. Unlike a company that could spend a million dollars in two years and fail and there's nothing really to show for it, if you spend a million dollars on open source, you probably have something amazing that other people can build on.", "quoter" : "Matt Mullenweg", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "When I first got into technology I didn't really understand what open source was. Once I started writing software, I realized how important this would be.", "quoter" : "Matt Mullenweg", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "EdX will be a creating a platform which will be open source, not for profit, and a portal for a website where universities will offer their courses. For example, MIT courses will be offered as MITx and Harvard courses as HarvardX.", "quoter" : "Anant Agarwal", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "Companies have been trying to figure out what it is that makes open source work.", "quoter" : "Brian Behlendorf", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "There were open source projects and free software before Linux was there. Linux in many ways is one of the more visible and one of the bigger technical projects in this area, and it changed how people looked at it because Linux took both the practical and ideological approach.", "quoter" : "Linus Torvalds", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "What is al Qaeda? It's an open source religious political movement that works off the global supply chain.", "quoter" : "Thomas Friedman", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "Al Qaeda is nothing more than a mutant supply chain. They're playing off the same platform as Wal-Mart and Dell. They're just not restrained by it. What is al Qaeda? It's an open source religious political movement that works off the global supply chain.", "quoter" : "Thomas Friedman", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
+{ "quote": "There are two main methodologies of open source development. There's the Apache model, which is design by committee - great for things like web servers. Then you have the benevolent dictator model. That's what Ubuntu is doing, with Mark Shuttleworth.", "quoter" : "Matt Mullenweg", "source": "https://www.brainyquote.com/quotes/keywords/open_source.html" },
