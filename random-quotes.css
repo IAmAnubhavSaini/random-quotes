@@ -1,14 +1,37 @@
-.author-message {
+/*body { font-family: sans-serif; margin: 0; padding: 0; }*/
+
+header, footer {
   position: fixed;
-  top: 0;
-  left:20%;
+  left: 20%;
   right: 20%;
   text-align: center;
 }
+
+header {
+  top: 0;
+}
+
+footer {
+  bottom: 0;
+}
+
+footer .controls span { 
+  margin: .1em 1em; 
+  font-size: 2em;
+  padding: .3em 2em;
+}
+
+footer .controls span:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
 .Quote {
   margin: 1em;
   padding: 1em;
 }
+
 .Quote .quote {
   font-family: 'Courgette', cursive;
   padding: 1em;
