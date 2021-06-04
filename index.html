@@ -1,65 +1,70 @@
 <!DOCTYPE html>
 <html ng-app="randomQuotes">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Random quote generator</title>
-  <link href='https://fonts.googleapis.com/css?family=Courgette|Bad+Script|Roboto+Condensed:400,700' rel='stylesheet' type='text/css' />
-  <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-  <link href="./random-quotes.css" type="text/css" rel="stylesheet" />
-  <script src="./angular.min.js"></script>
-  <script src="./random-quotes.app.js"></script>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Random quote generator | Anubhav | iamanubhavsaini.github.io</title>
+    <link href='https://fonts.googleapis.com/css?family=Courgette|Bad+Script|Roboto+Condensed:400,700' rel='stylesheet'
+          type='text/css'/>
+    <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./random-quotes.css" type="text/css" rel="stylesheet"/>
+    <script src="./angular.min.js"></script>
+    <script src="./random-quotes.app.js"></script>
 </head>
 <body ng-controller="RandomQuotesController as quotes">
-  <header class="author-message">
-    Hi, This is a simple random quotes generator. Please have a look at <a href="https://github.com/IAmAnubhavSaini/random-quotes">source code</a> and the <a href="https://iamanubhavsaini.github.io/random-quotes">online site</a>.
-    <br />
-    Follow author on <a href="https://twitter.com/iamanubhavsaini">twitter/iamanubhavsaini</a> and <a href="https://github.com/iamanubhavsaini">github/iamanubhavsaini</a>.
-  </header>
-  <section>
+<header class="author-message">
+    Hi, This is a random quotes generator app. Please have a look at <a
+        href="https://github.com/IAmAnubhavSaini/random-quotes">source code</a> and the <a
+        href="https://iamanubhavsaini.github.io/random-quotes">online site</a>.
+    <br/>
+    Follow me on <a href="https://twitter.com/f0c1s">t/@f0c1s</a> and <a
+        href="https://github.com/iamanubhavsaini">gh/iamanubhavsaini</a>.
+</header>
+<section>
     <div class="Quote" ng-init="model = quotes.randomQuote()">
-      <div class="quote">{{ model.quote }}</div>
-      <div class="quoter">{{ model.quoter }}</div>
-      <div class="source">{{ model.source }}</div>
+        <div class="quote">{{ model.quote }}</div>
+        <div class="quoter">{{ model.quoter }}</div>
+        <div class="source">{{ model.source }}</div>
     </div>
-  </section>
-  <footer>
+</section>
+<footer>
     <div class="controls">
-      <span id="refresh" title="new quote" ng-click="model = quotes.randomQuote()"><i class="glyphicon glyphicon-refresh"></i></span>
-      <span id="tweet" title="tweet it"><i class="glyphicon glyphicon-heart"></i></span>
+        <span id="refresh" title="new quote" ng-click="model = quotes.randomQuote()"><i
+                class="glyphicon glyphicon-refresh"></i></span>
+        <span id="tweet" title="tweet it"><i class="glyphicon glyphicon-heart"></i></span>
     </div>
-  </footer>
-  <div id="scripts">
+</footer>
+<div id="scripts">
     <script src="jquery-2.1.4.min.js"></script>
     <script>
-      $(function(){
-        $('#tweet').on('click', function(){
-          (function postQuoteAsTweet(quoteText, quoterName){
-            var link = "https://twitter.com/home?status=";
-            var quote = encodeURIComponent(quoteText + " -"+ quoterName);
-            var times = Math.floor(quote.length / 133);
+        $(function () {
+            $('#tweet').on('click', function () {
+                (function postQuoteAsTweet(quoteText, quoterName) {
+                    var link = "https://twitter.com/home?status=";
+                    var quote = encodeURIComponent(quoteText + " -" + quoterName);
+                    var times = Math.floor(quote.length / 133);
 
-            var i = (function breakQuoteAndPostTweets(times, quote, link){
-              
-              var tweets = [];
-              for(var i = 0; i <= times; i++){
-                tweets[i] = quote.substring(i*130, (i+1)*130) + "["+(i+1)+"/"+(times+2)+"]";
-              }
-              tweets.forEach(function(t){
-                window.open(link + t, "_blank");
-              });
-              return i;
-            })(times,  quote, link);
-            
-            (function postGratitudeLink(times, i, link){
-              window.open(link + encodeURIComponent("[posted through https://iamanubhavsaini.github.io/random-quotes built using angular #jquery #twbs #opensource #github] ["+(i+1)+"/"+(times+2)+"]"), "_blank");
-            })(times, i, link);
+                    var i = (function breakQuoteAndPostTweets(times, quote, link) {
 
-          })($('.quote').text(), $('.quoter').text());          
+                        var tweets = [];
+                        for (var i = 0; i <= times; i++) {
+                            tweets[i] = quote.substring(i * 130, (i + 1) * 130) + "[" + (i + 1) + "/" + (times + 2) + "]";
+                        }
+                        tweets.forEach(function (t) {
+                            window.open(link + t, "_blank");
+                        });
+                        return i;
+                    })(times, quote, link);
+
+                    (function postGratitudeLink(times, i, link) {
+                        window.open(link + encodeURIComponent("[posted through https://iamanubhavsaini.github.io/random-quotes built using angular #jquery #twbs #opensource #github] [" + (i + 1) + "/" + (times + 2) + "]"), "_blank");
+                    })(times, i, link);
+
+                })($('.quote').text(), $('.quoter').text());
+            });
         });
-      });
     </script>
-  </div>
+</div>
 </body>
 </html>
