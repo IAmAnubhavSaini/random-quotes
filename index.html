@@ -21,18 +21,21 @@
     Follow me on <a href="https://twitter.com/f0c1s">t/@f0c1s</a> and <a
         href="https://github.com/iamanubhavsaini">gh/iamanubhavsaini</a>.
 </header>
-<section>
+<main class="content">
     <div class="Quote" ng-init="model = quotes.randomQuote()">
         <div class="quote">{{ model.quote }}</div>
         <div class="quoter">{{ model.quoter }}</div>
         <div class="source">{{ model.source }}</div>
     </div>
-</section>
+</main>
 <footer>
     <div class="controls">
-        <span id="refresh" title="new quote" ng-click="model = quotes.randomQuote()"><i
-                class="glyphicon glyphicon-refresh"></i></span>
-        <span id="tweet" title="tweet it"><i class="glyphicon glyphicon-heart"></i></span>
+        <span  class="control" id="refresh" title="new quote" ng-click="model = quotes.randomQuote()">
+            <i class="glyphicon glyphicon-refresh"></i>
+        </span>
+        <span  class="control" id="tweet" title="tweet it">
+            <i class="glyphicon glyphicon-heart"></i>
+        </span>
     </div>
 </footer>
 <div id="scripts">
